@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Buhari Nasir Ahmad">
+    <meta name="Description" content="Student Registration System">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="index.js" defer></script>
+    <title>Student Registration System</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="center-text">
+        <h1>Student Registration System</h1>
+        <p>The Student Registration System is a digital platform designed to streamline the registration process for students.</p>
+        <p>It allows students to input and manage their personal details, including name, class, address, and contact number.</p> 
+        <p>The system features intuitive functionalities for editing and deleting records, ensuring accurate and up-to-date student information.</p>
+        <p>This user-friendly system enhances administrative efficiency by simplifying data entry and management tasks.</p>
+    </header>
+    <!--==================== MAIN ====================-->
+    <main class="container">
+        <!--==================== REGISTRATION FORM ====================-->
+        <article class="registration">
+            <form action="" id="studentForm">
+                <label for="studentId">Student ID: </label><br>
+                <input type="number" name="studentId" id="studentId">
+                <div id="studentIdError" class="error">Please enter a valid student ID (numbers only).</div><br>
+                
+                <label for="studentName">Student Name: </label><br>
+                <input type="text" name="studentName" id="studentName">
+                <div id="studentNameError" class="error">Please enter a valid name (letters only).</div><br>
+                
+                <label for="contactNo">Contact No: </label><br>
+                <input type="number" name="contactNo" id="contactNo">
+                <div id="contactNoError" class="error">Please enter a valid contact number (numbers only).</div><br>
+                
+                <label for="email">Email: </label><br>
+                <input type="email" name="email" id="email">
+                <div id="emailError" class="error">Please enter a valid email address.</div><br>
+                
+                <div class="button-container">
+                    <button type="submit" id="addButton">Add</button>
+                </div>
+            </form>
+        </article>
+        <!--==================== REGISTERED STUDENT RECORDS ====================-->
+        <article class="Registered">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Contact No</th>
+                            <th scope="col">Email</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="students">
+                             <!-- Student rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+              &#169; Copyright Buhari. All rights reserved
+     </footer>
+</body>
+</html>
